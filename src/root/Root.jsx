@@ -4,11 +4,11 @@ import { Dashboard, Assistants, Groups, Create, Analitics, Login, Error, CreateA
 import MainLayout from '../layout/Layout'
 
 const Root = () => {
-  const [ role , setRole ] = React.useState('')
-  React.useEffect(() => {
-    const getlocol = localStorage.getItem('role')
-    setRole(getlocol)
-}, [])
+//   const [ role , setRole ] = React.useState('');
+//   React.useEffect(() => {
+//     const getlocol = localStorage.getItem('role')
+//     setRole(getlocol)
+// }, [])
 
   return (
     <>
