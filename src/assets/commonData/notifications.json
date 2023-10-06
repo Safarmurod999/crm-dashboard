@@ -1,0 +1,22 @@
+[
+  {
+    "icon": "bx bx-error",
+    "content": "Praesent in diam eu turpis placerat egestas"
+  },
+  {
+    "icon": "bx bx-package",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit blandit quam"
+  },
+  {
+    "icon": "bx bx-cart",
+    "content": "Praesent interdum risus in pellentesque tincidunt rutrum lacus leo"
+  },
+  {
+    "icon": "bx bx-error",
+    "content": "Proin feugiat rutrum molestie"
+  },
+  {
+    "icon": "bx bx-cart",
+    "content": "Nam sagittis eleifend sapien quis dapibus"
+  }
+]

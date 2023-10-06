@@ -1,0 +1,70 @@
+.table-wrapper {
+  overflow-y: auto;
+}
+
+table {
+  width: 100%;
+  min-width: 400px;
+  border-spacing: 0;
+}
+
+thead {
+  background-color: var(--secondary-bg);
+}
+
+tr {
+  text-align: left;
+}
+
+th,
+td {
+  text-transform: capitalize;
+  padding: 15px 10px;
+}
+
+tbody > tr:hover {
+  background-color: var(--primary-color);
+  color: var(--txt-white);
+}
+
+.table-pagination {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.table-pagination-item {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.table-pagination-item.active {
+  background-color: var(--primary-color);
+  color: var(--txt-white);
+  font-weight: 600;
+}
+
+.table-pagination-item ~ .table-pagination-item {
+  margin-left: 10px;
+}
+
+.table-pagination-item:hover {
+  color: var(--txt-white);
+  background-color: var(--secondary-color);
+}
+
+/* 
+
+
+  
+    
+   
+
+*/

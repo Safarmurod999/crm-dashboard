@@ -1,0 +1,38 @@
+.theme-mode-light {
+  --primary-bg: var(--main-bg-light);
+  --secondary-bg: var(--second-bg-light);
+  --txt-color: var(--txt-color-light);
+  --box-shadow: var(--box-shadow-light);
+}
+
+.theme-mode-dark {
+  --primary-bg: var(--main-bg-dark);
+  --secondary-bg: var(--second-bg-dark);
+  --txt-color: var(--txt-color-dark);
+  --box-shadow: var(--box-shadow-dark);
+}
+
+.theme-color-blue {
+  --primary-color: var(--main-color-blue);
+  --secondary-color: var(--second-color-blue);
+}
+
+.theme-color-red {
+  --primary-color: var(--main-color-red);
+  --secondary-color: var(--second-color-red);
+}
+
+.theme-color-purple {
+  --primary-color: var(--main-color-purple);
+  --secondary-color: var(--second-color-purple);
+}
+
+.theme-color-green {
+  --primary-color: var(--main-color-green);
+  --secondary-color: var(--second-color-green);
+}
+
+.theme-color-orange {
+  --primary-color: var(--main-color-orange);
+  --secondary-color: var(--second-color-orange);
+}

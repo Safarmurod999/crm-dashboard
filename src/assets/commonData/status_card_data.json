@@ -1,0 +1,22 @@
+[
+  {
+    "icon": "bx bx-book-content",
+    "count": "10",
+    "title": "courses"
+  },
+  {
+    "icon": "bx bx-user-pin",
+    "count": "70",
+    "title": "Assistants"
+  },
+  {
+    "icon": "bx bx-user",
+    "count": "1000",
+    "title": "Students"
+  },
+  {
+    "icon": "bx bx-group",
+    "count": "100",
+    "title": "Groups"
+  }
+]

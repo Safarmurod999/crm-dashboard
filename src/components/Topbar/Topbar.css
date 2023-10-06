@@ -1,0 +1,93 @@
+.topbar {
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--topnav-height);
+}
+
+
+.topbar-search {
+  position: relative;
+  height: 50px;
+  background-color: var(--primary-bg);
+  display: flex;
+  align-items: center;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.topbar-search > input {
+  height: 100%;
+  width: 100%;
+  padding: 10px 60px 10px 20px;
+  font-size: 1rem;
+  border-radius: var(--border-radius);
+  color: var(--txt-color);
+  background-color: var(--primary-bg);
+}
+
+.topbar-search > i {
+  font-size: 1.5rem;
+  position: absolute;
+  right: 20px;
+}
+
+@media only screen and (max-width: 420px) {
+  .topbar {
+    padding: 0;
+    justify-content: center;
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+  .topbar-search{
+    display: none;
+  }
+}
+.topbar-menu {
+  display: flex;
+  align-items: centre;
+}
+
+.topbar-menu-item ~ .topbar-menu-item {
+  margin-left: 30px;
+}
+
+.notification-item {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.notification-item:hover {
+  background-color: var(--secondary-bg);
+}
+
+.notification-item > i {
+  margin-right: 20px;
+  font-size: 1.5rem;
+}
+
+.topbar-user {
+  display: flex;
+  align-items: center;
+}
+
+.topbar-userimage {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  /* overflow: hidden; */
+  margin-right: 10px;
+}
+
+.topbar-userimage > img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.topbar-username {
+  font-size: 1rem;
+  font-weight: 600;
+}
