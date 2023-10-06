@@ -5,7 +5,7 @@ const FormCreate = ({ setData, value, change,setValues }) => {
   return (
     <form
       onSubmit={setData}
-      className="flex h-[860px] w-[1600px] bg-transparent items-center justify-center mt-10">
+      className="flex h-[860px] w-full bg-transparent items-center justify-center mt-10">
       <div className="grid formCreate rounded-lg shadow-xl w-11/12 md:w-9/12 lg:w-1/2">
         <div className="flex cursor-pointer items-center mt-6 justify-center pr-4  gap-2">
           <span className="w-[40px] h-[40px]  font-bold rounded-full bg-blue-600 text-white flex items-center justify-center">
