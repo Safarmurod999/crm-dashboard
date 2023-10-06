@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { useInputValue } from '../../hooks/useInputValues/useInputvalues'
+// import { useInputValue } from '../../hooks/useInputValues/useInputvalues'
 
 const StudentCreateForm = ({ setData, value, change }) => {
 

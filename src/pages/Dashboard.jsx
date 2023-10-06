@@ -7,8 +7,6 @@ import { Link } from "react-router-dom";
 import statusCardData from "../assets/commonData/status_card_data.json";
 import { chartOptions, colorOptions } from "../assets/commonData/ChartValues";
 import {
-
-  orderStatus,
   TopAssistants,
 } from "../assets/commonData/userlist";
 
