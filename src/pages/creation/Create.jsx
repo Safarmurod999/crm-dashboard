@@ -20,6 +20,12 @@ const createUserItem = [
     title: 'Create Student',
     path: '/studentcreate'
   },
+  {
+    id: 4,
+    icon: 'category',
+    title: 'Create Category',
+    path: '/categorycreate'
+  }
 
 ]
 
@@ -28,7 +34,7 @@ const Create = () => {
     <>
       <h1 className='text-2xl'>Createing </h1>
       <br /><br />
-      <div className='create'>
+      <div className='create flex flex-row gap-4'>
 
         {
           createUserItem.map((item) => (<CreateUserCards key={item.id} {...item} />))

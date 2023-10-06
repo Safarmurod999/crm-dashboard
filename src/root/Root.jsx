@@ -1,7 +1,8 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { Dashboard, Assistants, Groups, Create, Analitics, Login, Error, CreateAssistant, GroupCreate, CreateStudent,AssistantPage } from '../pages'
+import { Dashboard, Assistants, Groups, Create, Analitics, Login, Error, CreateAssistant, GroupCreate, CreateStudent,CategoryCreate,AssistantPage } from '../pages'
 import MainLayout from '../layout/Layout'
+// import CategoryCreate from "../components/formCreate/CategoryCreate";
 
 const Root = () => {
 //   const [ role , setRole ] = React.useState('');
@@ -22,6 +23,7 @@ const Root = () => {
         <Route path="/assistantcreate" element={<CreateAssistant/>} />
         <Route path="/studentcreate" element={<CreateStudent />} />
         <Route path="/groupcreate" element={<GroupCreate />} />
+        <Route path="/categorycreate" element={<CategoryCreate/>}/>
         <Route path="*" element={<Error />} />
       </Route>
       <Route path="/login" element={<Login />} />
