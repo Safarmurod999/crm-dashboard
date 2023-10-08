@@ -1,59 +1,69 @@
-import React from "react";
-import Table from "../components/Table/Table";
-import {UseAxios} from '../hooks/useAxios'
+import React, { useState, useEffect } from "react";
 
-// ================== Customers Table Headers =========== /
+const totalWorkers = 1000;
+const workersPerPage = 9;
+
+const generateWorkers = () => {
+  const workers = [];
+  for (let i = 1; i <= totalWorkers; i++) {
+    workers.push({
+      id: i,
+      name: `Worker ${i}`,
+      country: `Country ${i}`,
+      lastname: `Lastname ${i}`,
+      email: `worker${i}@example.com`,
+      phone: `123456789${i}`,
+    });
+  }
+  return workers;
+};
+
 const AssistantsTableHead = [
-  "#",
-  "name",
-  "lastname",
-  "age",
-  "direction",
-  "phone",
-  "role",
-  "telegram account",
-  "created at"
-  
+  "Name",
+  "Country",
+  "Lastname",
+  "Email",
+  "Phone Number"
 ];
 
-/* =============== Function to Render  Table Head ===================== */
 const renderAssistantsTableHead = (item, index) => <th key={index}>{item}</th>;
 
-/* =============== Function to Render  Table Body ===================== */
-const renderAssistantsTableBody = (item, index) => (
-  <tr key={index}>
-    <td>{index + 1}</td>
-    <td>{item.firstname}</td>
+const renderAssistantsTableBody = (item) => (
+  <tr key={item.id}>
+    <td>{item.name}</td>
+    <td>{item.country}</td>
     <td>{item.lastname}</td>
-    <td>{item.age}</td>
-    <td>{item.job_title}</td>
+    <td>{item.email}</td>
     <td>{item.phone}</td>
-    <td>{item.role}</td> 
-    <td>{item.t_username}</td> 
-    <td>{item.created_at}</td> 
-    
-
   </tr>
 );
 
 const Assistants = () => {
-  const [assistants, setAssistants ] = React.useState([])
+  const [currentPage, setCurrentPage] = useState(1);
+  const [workers, setWorkers] = useState([]);
 
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      const generatedWorkers = generateWorkers();
+      setWorkers(generatedWorkers);
+    }, 1000);
 
-  const getData = async () => {
-    const axios = UseAxios()
-    try {
-      const response = await axios({url:'/assistants'})
-      setAssistants(response.data.data)
-    } catch (error) {
-      console.log(error);
-    }
-  }
+    return () => clearTimeout(timeout);
+  }, []);
 
-  React.useEffect(() => {
-    getData()
-  }, [])
+  const totalPageCount = Math.ceil(totalWorkers / workersPerPage);
 
+  const handleNextPage = () => {
+    setCurrentPage((prevPage) => Math.min(prevPage + 1, totalPageCount));
+  };
+
+  const handlePrevPage = () => {
+    setCurrentPage((prevPage) => Math.max(prevPage - 1, 1));
+  };
+
+  const startIndex = (currentPage - 1) * workersPerPage;
+  const endIndex = Math.min(startIndex + workersPerPage, totalWorkers);
+  const visibleWorkers = workers.slice(startIndex, endIndex);
 
   return (
     <section>
@@ -61,16 +71,32 @@ const Assistants = () => {
       <div className="row">
         <div className="col-12">
           <div className="card">
-            {
-              assistants.length > 0 ?
-              <Table
-              limit="5"
-              headData={AssistantsTableHead}
-              renderHead={(item, index) => renderAssistantsTableHead(item, index)}
-              bodyData={assistants}
-              renderBody={(item, index) => renderAssistantsTableBody(item, index)}
-              /> : <h1>loading ...</h1>
-            }
+            <main>
+              <div className="user-table">
+                <table>
+                  <thead>
+                    <tr>
+                      {AssistantsTableHead.map((item, index) => renderAssistantsTableHead(item, index))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {visibleWorkers.map((user) => renderAssistantsTableBody(user))}
+                  </tbody>
+                </table>
+                <div className="pagination">
+                  <button onClick={handlePrevPage} disabled={currentPage === 1}>
+                    Previous
+                  </button>
+                  <span>
+                    Page {currentPage} of {totalPageCount}
+                  </span>
+                  <button onClick={handleNextPage} disabled={currentPage === totalPageCount}>
+                    Next
+                  </button>
+                </div>
+                <div className="total-length">Total Workers: {totalWorkers}</div>
+              </div>
+            </main>
           </div>
         </div>
       </div>
