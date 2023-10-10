@@ -11,7 +11,7 @@ import ThemeMenu from "../Thememenu/ThemeMenu";
 
 // Current User Details //
 const currentUser = {
-  userName: "Susan Smith",
+  userName: "John Doe",
   image: userImage,
 };
 
@@ -50,11 +50,12 @@ const Topbar = () => {
       </div>
       <div className="topbar-menu">
         <div className="topbar-menu-item">
-          <Dropdown
+          {/* <Dropdown
             userProfile={() => renderUser(currentUser)}
-            contentData={userMenu}
             renderItems={(item, index) => renderUserMenu(item, index)}
-          />
+          > */}
+          <Link to="/profile">{renderUser(currentUser)}</Link>
+            {/* </Dropdown> */}
         </div>
         <div className="topbar-menu-item">
           <Dropdown

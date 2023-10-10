@@ -1,19 +1,22 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { Dashboard, Assistants, Groups, Create, Analitics, Login, Error, CreateAssistant, GroupCreate, CreateStudent,CategoryCreate,AssistantPage } from '../pages'
+import { Dashboard, Assistants, Groups, Create, Analitics, Login, Error, CreateAssistant, GroupCreate, CreateStudent, CategoryCreate, AssistantPage } from '../pages'
 import MainLayout from '../layout/Layout'
 import './Root.css';
+import Profile from "../pages/Profile";
+// import CategoryCreate from "../components/formCreate/CategoryCreate";
+
 const Root = () => {
-//   const [ role , setRole ] = React.useState('');
-//   React.useEffect(() => {
-//     const getlocol = localStorage.getItem('role')
-//     setRole(getlocol)
-// }, [])
+  //   const [ role , setRole ] = React.useState('');
+  //   React.useEffect(() => {
+  //     const getlocol = localStorage.getItem('role')
+  //     setRole(getlocol)
+  // }, [])
 
   return (
     <>
       <Routes>
-        <Route path="/" element={<MainLayout/>}>
+        <Route path="/" element={<MainLayout />}>
           <Route index element={<Dashboard />} />
           <Route path="/assistants" element={<Assistants />} />
           <Route path="/groups" element={<Groups />} />
@@ -26,7 +29,7 @@ const Root = () => {
           <Route path="*" element={<Error />} />
         </Route>
         <Route path="/login" element={<Login />} />
-        <Route path="/assistantpage" element={<AssistantPage/>} />
+        <Route path="/assistantpage" element={<AssistantPage />} />
       </Routes>
     </>
   );
