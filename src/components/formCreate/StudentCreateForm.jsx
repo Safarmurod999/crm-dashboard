@@ -7,7 +7,7 @@ const StudentCreateForm = ({ setData, value, change }) => {
 
 
   return (
-    <form onSubmit={setData} className="flex h-[860px] w-full bg-transparent items-center justify-center mt-10">
+    <form onSubmit={setData} className="flex h-[860px] w-full bg-transparent items-start justify-center mt-10">
 
     <div className="grid formCreate rounded-lg shadow-xl w-11/12 md:w-9/12 lg:w-1/2">
   
