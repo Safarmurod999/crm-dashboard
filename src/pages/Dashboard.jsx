@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Chart from "react-apexcharts";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import ReactApexChart from 'react-apexcharts';
 
 //===== Data ======/
@@ -174,7 +174,7 @@ const Dashboard = () => {
       },
     },
   });
-
+  console.log(chartData2);
   const generateRandomData = () => {
     const randomData = {
       data: [],
@@ -302,7 +302,7 @@ const Dashboard = () => {
                 height="100%"
               />
             </div>
-         
+
           </div>
         </div>
 

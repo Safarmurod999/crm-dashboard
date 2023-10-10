@@ -5,7 +5,7 @@ import Dropdown from "../Dropdown/Dropdown";
 import "./Topbar.css";
 
 import notifications from "../../assets/commonData/notifications.json";
-import userMenu from "../../assets/commonData/user_menu.json";
+// import userMenu from "../../assets/commonData/user_menu.json";
 import userImage from "../../assets/images/userImage.jpg";
 import ThemeMenu from "../Thememenu/ThemeMenu";
 
@@ -34,12 +34,12 @@ const renderNotificationItems = (item, index) => (
 );
 
 //=============== Function to Render User Details =================================/
-const renderUserMenu = (item, index) => (
-  <Link to="/" className="notification-item" key={index}>
-    <i className={item.icon}></i>
-    <span>{item.content}</span>
-  </Link>
-);
+// const renderUserMenu = (item, index) => (
+//   <Link to="/" className="notification-item" key={index}>
+//     <i className={item.icon}></i>
+//     <span>{item.content}</span>
+//   </Link>
+// );
 
 const Topbar = () => {
   return (

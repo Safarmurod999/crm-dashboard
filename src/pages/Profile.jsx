@@ -24,7 +24,7 @@ export default function Profile() {
             <section>
                 <div className="rowAccount">
                     <div className="ImageProfile">
-                        <img src="https://avatars.mds.yandex.net/i?id=8f037456a1a56bf115a68de1fa655982fed635ca-10879141-images-thumbs&n=13" alt="Default Image of User" />
+                        <img src="https://avatars.mds.yandex.net/i?id=8f037456a1a56bf115a68de1fa655982fed635ca-10879141-images-thumbs&n=13" alt={"User"} />
                     </div>
                     <div className="InfoProfile">
                         <p className="p1Account">John Doe</p>

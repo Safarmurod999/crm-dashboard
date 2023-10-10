@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import { Dashboard, Assistants, Groups, Create, Analitics, Login, Error, CreateAssistant, GroupCreate, CreateStudent, CategoryCreate, AssistantPage } from '../pages'
 import MainLayout from '../layout/Layout'
 import './Root.css';
-import Profile from "../pages/Profile";
+// import Profile from "../pages/Profile";
 // import CategoryCreate from "../components/formCreate/CategoryCreate";
 
 const Root = () => {
