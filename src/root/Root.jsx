@@ -22,10 +22,11 @@ const Root = () => {
           <Route path="/groups" element={<Groups />} />
           <Route path="/create" element={<Create />} />
           <Route path="/analytics" element={<Analitics />} />
-          <Route path="/assistantcreate" element={<CreateAssistant/>} />
+          <Route path="/assistantcreate" element={<CreateAssistant />} />
           <Route path="/studentcreate" element={<CreateStudent />} />
           <Route path="/groupcreate" element={<GroupCreate />} />
-          <Route path="/categorycreate" element={<CategoryCreate/>}/>
+          <Route path="/categorycreate" element={<CategoryCreate />} />
+          <Route path="/profile" element={<Profile />} />
           <Route path="*" element={<Error />} />
         </Route>
         <Route path="/login" element={<Login />} />
