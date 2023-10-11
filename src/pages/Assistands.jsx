@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link, Outlet } from "react-router-dom";
 
 const totalWorkers = 1000;
 const workersPerPage = 9;
@@ -30,11 +31,23 @@ const renderAssistantsTableHead = (item, index) => <th key={index}>{item}</th>;
 
 const renderAssistantsTableBody = (item) => (
   <tr key={item.id}>
-    <td>{item.name}</td>
-    <td>{item.country}</td>
-    <td>{item.lastname}</td>
-    <td>{item.email}</td>
-    <td>{item.phone}</td>
+    <td><Link to="/profile">{item.name}</Link></td>
+    <td>
+      <Link to="/profile">{item.country}</Link>
+    </td>
+    <td>
+      <Link to="/profile">{item.lastname}</Link>
+    </td>
+
+    <td>
+      <Link to="/profile">{item.email}</Link>
+
+    </td>
+
+    <td>
+      <Link to="/profile">{item.phone}</Link>
+    </td>
+    <Outlet />
   </tr>
 );
 
