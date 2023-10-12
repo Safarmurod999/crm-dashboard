@@ -1,5 +1,6 @@
 [
   {
+    "id":1,
     "groupNum":121,
     "yonalish":"frontend dasturlash",
     "daytime":"dushanba-charshanba-juma, 14:30",
@@ -10,6 +11,7 @@
     
   },
   {
+    "id":2,
     "groupNum":121,
     "yonalish":"frontend dasturlash",
     "daytime":"dushanba-charshanba-juma, 14:30",
@@ -20,6 +22,7 @@
 
   },
   {
+    "id":3,
     "groupNum":121,
     "yonalish":"frontend dasturlash",
     "daytime":"dushanba-charshanba-juma, 14:30",
@@ -30,6 +33,7 @@
 
   },
   {
+    "id":4,
     "groupNum":121,
     "yonalish":"frontend dasturlash",
     "daytime":"dushanba-charshanba-juma, 14:30",
@@ -40,6 +44,7 @@
 
   },
   {
+    "id":5,
     "groupNum":121,
     "yonalish":"frontend dasturlash",
     "daytime":"dushanba-charshanba-juma, 14:30",
@@ -50,12 +55,13 @@
 
   },
   {
+    "id":6,
     "groupNum":121,
     "yonalish":"frontend dasturlash",
     "daytime":"dushanba-charshanba-juma, 14:30",
     "createdDate":"2023.11.21",
     "img":"img",
-    "room":"telegram xonasi",
+    "room":"teleg10ram xonasi",
     "assistants":"Aliev Davlatbek"
 
   }

@@ -1,62 +1,42 @@
 import React from "react";
+import { Link, Outlet } from "react-router-dom";
 import Table from "../components/Table/Table";
-import { UseAxios } from "../hooks/useAxios";
+import GroupList from '../assets/commonData/group_list.json';
+
 const renderGroupTableHead = (item, index) => <th key={index}>{item}</th>;
 
-const rendergroupTableBody = (item, index) => (
-  <tr key={index}>
-    <td>{item.teacher}</td>
-    <td>{item.assist_name} {item.assist_lastname} </td>
-    <td>{item.study_field_name}</td>
-    <td>{item.room}</td>
-    <td>{item.created_at}</td>
-    <td>{item.study_field_price}</td>
-    <td>{item.time}</td>
-    <td>{item.tg_groups}</td>
-
-  </tr>
+const renderGroupTableBody = () => (
+  GroupList.map((group) => (
+    <tr key={group.id}>
+      <td><Link to="/assistants">{group.groupNum}</Link></td>
+      <td><Link to="/assistants">{group.yonalish}</Link></td>
+      <td><Link to="/assistants">{group.daytime}</Link></td>
+      <td><Link to="/assistants">{group.createdDate}</Link></td>
+      <td><Link to="/assistants">{group.room}</Link></td>
+      <td><Link to="/assistants">{group.assistants}</Link></td>
+      <Outlet />
+    </tr>
+  ))
 );
 
-const groupheader = ['Teacher',  'Assistants','Directions',"room",'Created at', 'price', "time",'telegram group' ]
-
-
+const groupheader = ['Teacher', 'Assistants', 'Directions', 'Room', 'Created at', 'Price', 'Time', 'Telegram Group'];
 
 const Groups = () => {
-const [groups , setGroups] = React.useState([])
-
-
-  const getData = async () => {
-    const axios = UseAxios()
-    try {
-      const response = await axios({url:'/groups'})
-      // console.log(response.data.data);
-        setGroups(response.data.data)
-    } catch (error) {
-      console.log(error);
-    }
-  }
-  
-  React.useEffect(() => {
-    getData()
-  }, [])
-  
-
-
   return (
     <div>
       <h2>Groups</h2>
       <br /><br />
       {
-        groups.length > 0 ?
-        <Table
-        limit="5"
-        headData={groupheader}
-        renderHead={(item, index) => renderGroupTableHead(item, index)}
-        bodyData={groups}
-        renderBody={(item, index) => rendergroupTableBody(item, index)}
-      />
-        :
-        <h1>loading...</h1>
+        GroupList.length > 0 ?
+          <Table
+            limit={5}
+            headData={groupheader}
+            renderHead={(item, index) => renderGroupTableHead(item, index)}
+            bodyData={GroupList}
+            renderBody={() => renderGroupTableBody()}
+          />
+          :
+          <h1>Loading...</h1>
       }
     </div>
   );

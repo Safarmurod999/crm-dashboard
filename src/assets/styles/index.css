@@ -372,7 +372,6 @@ ul {
   height: 358px;
   border-radius: 20px;
   border: 1px solid #000;
-  background-color: var(--color-gray, #F5F5F5);
   border: 1px solid grey;
   padding-left: 48px;
 }
@@ -423,7 +422,6 @@ ul {
   width: 100%;
   height: 907px;
   flex-shrink: 0;
-  background-color: var(--color-gray, #F5F5F5);
   border: 1px solid #F5F5F5;
   border-radius: 10px;
   padding: 10px;
@@ -434,7 +432,6 @@ ul {
 }
 
 .monthly {
-  color: #000;
   font-family: "Poppins", sans-serif;
   font-size: 26px;
   font-style: normal;
@@ -453,7 +450,6 @@ ul {
 }
 
 .penalty {
-  color: #000;
   font-family: "Poppins", sans-serif;
   font-size: 26px;
   font-style: normal;
@@ -464,7 +460,6 @@ ul {
 }
 
 .monthly_price {
-  color: #000;
   font-family: "Poppins", sans-serif;
   font-size: 26px;
   font-style: normal;
@@ -486,7 +481,6 @@ ul {
 }
 
 .advance {
-  color: #000;
   font-family: "Poppins", sans-serif;
   font-size: 26px;
   font-style: normal;
@@ -497,7 +491,6 @@ ul {
 }
 
 .bonus {
-  color: #000;
   font-family: "Poppins", sans-serif;
   font-size: 26px;
   font-style: normal;
@@ -512,7 +505,6 @@ ul {
   flex-wrap: wrap;
   margin-top: 50px;
   border: 1px solid #000;
-  background: #FFF;
   border-radius: 10px;
   padding: 10px;
 }
@@ -523,7 +515,6 @@ ul {
   margin-left: 5px;
   margin-bottom: 10px;
   /* Typograph */
-  color: #000;
   font-family: "Roboto", sans-serif;
   font-size: 20px;
   font-style: normal;
@@ -538,7 +529,6 @@ ul {
 }
 
 .advance_day {
-  color: #000;
   font-family: "Poppins", sans-serif;
   font-size: 26px;
   font-style: normal;
@@ -549,7 +539,6 @@ ul {
 }
 
 .penalty_day {
-  color: #000;
   font-family: "Poppins", sans-serif;
   font-size: 26px;
   font-style: normal;
@@ -560,7 +549,6 @@ ul {
 }
 
 .bonus_day {
-  color: #000;
   font-family: "Poppins", sans-serif;
   font-size: 26px;
   font-style: normal;
@@ -586,7 +574,6 @@ ul {
 }
 
 .p1AboutSelf {
-  color: #000;
   font-family: "Roboto", sans-serif;
   font-size: 20px;
   font-style: normal;
@@ -600,7 +587,6 @@ ul {
   width: 721px;
   height: 109px;
   flex-shrink: 0;
-  color: #000;
   font-family: "Roboto", sans-serif;
   font-size: 20px;
   font-style: normal;
@@ -615,7 +601,6 @@ ul {
 }
 
 .p1AboutFamily {
-  color: #000;
   font-family: "Roboto", sans-serif;
   font-size: 20px;
   font-style: normal;
@@ -629,7 +614,6 @@ ul {
   width: 721px;
   height: 109px;
   flex-shrink: 0;
-  color: #000;
   font-family: "Roboto", sans-serif;
   font-size: 20px;
   font-style: normal;
@@ -648,7 +632,6 @@ ul {
 
 .mini-card {
   width: 11%;
-  background-color: #fff;
   padding: 10px;
   margin: 5px;
 }
